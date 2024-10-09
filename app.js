@@ -23,16 +23,16 @@ function calculateNotes (event) {
             response.textContent = `SR/SRA ${user.value} su nota definitiva es: ${result} perdio la materia`
             event.preventDefault()
         }else 
-            if(result >= 3.5 && result <= 4.5){
-                response.style.color = 'orange'
-                response.textContent = `SR/SRA ${user.value} su nota definitiva es: ${result} gano la materia`
-                event.preventDefault()
-                }else
-                    if(result > 4.5){
-                        response.style.color = 'green'
-                    response.textContent = `SR/SRA ${user.value} su nota definitiva es: ${result} optuvo un resultado sobresaliente`
-                    event.preventDefault()
-                    }
+        if(result >= 3.5 && result <= 4.5){
+            response.style.color = 'orange'
+            response.textContent = `SR/SRA ${user.value} su nota definitiva es: ${result} gano la materia`
+            event.preventDefault()
+        }else
+        if(result > 4.5){
+            response.style.color = 'green'
+            response.textContent = `SR/SRA ${user.value} su nota definitiva es: ${result} optuvo un resultado sobresaliente`
+            event.preventDefault()
+        }
     }else {
         response.textContent = `SR/SRA ${user.value} las notas ingresadas son incorrectas`
         event.preventDefault()
