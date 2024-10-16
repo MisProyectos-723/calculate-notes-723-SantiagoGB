@@ -7,6 +7,7 @@ const btnPredict = document.getElementById('btn-predict')
 const response = document.getElementById('response')
 
 btnCalculate.addEventListener('click', calculateNotes)
+btnPredict.addEventListener('click', PredicNote)
 
 function calculateNotes (event) {
     let user = userName.value
@@ -20,22 +21,38 @@ function calculateNotes (event) {
 
         if (result < 3.5) {
             response.style.color = 'black'
-            response.textContent = `SR/SRA ${user.value} su nota definitiva es: ${result} perdio la materia`
+            response.textContent = `SR/SRA ${user} su nota definitiva es: ${result} perdio la materia`
             event.preventDefault()
         }else 
         if(result >= 3.5 && result <= 4.5){
             response.style.color = 'orange'
-            response.textContent = `SR/SRA ${user.value} su nota definitiva es: ${result} gano la materia`
+            response.textContent = `SR/SRA ${user} su nota definitiva es: ${result} gano la materia`
             event.preventDefault()
         }else
         if(result > 4.5){
             response.style.color = 'green'
-            response.textContent = `SR/SRA ${user.value} su nota definitiva es: ${result} optuvo un resultado sobresaliente`
+            response.textContent = `SR/SRA ${user} su nota definitiva es: ${result} optuvo un resultado sobresaliente`
             event.preventDefault()
         }
     }else {
         response.textContent = `SR/SRA ${user.value} las notas ingresadas son incorrectas`
         event.preventDefault()
     }
+}
+
+function PredicNote(event) {
+    let user = userName.value
+    let note1 = Number(data1.value)
+    let note2 = Number(data2.value)
+    let minNote = 3.5
+
+    let result = (minNote - (note1 * 0.3) - (note2 * 0.3)) / 0.4
+
+    data3.value = result;
+
+    alert(user + ' La nota minima tiene que ser: ' + result)
+
+    event.preventDefault()
+
 }
 
