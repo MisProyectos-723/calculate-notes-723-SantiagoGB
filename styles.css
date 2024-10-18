@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #e9ecef;
+  background-color: #2B2E33;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,10 +9,10 @@ body {
 }
 
 .container {
-  background: white;
+  background: #2E3946;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px rgba(95, 131, 145, 0.096);
   width: 400px;
   text-align: center;
 }
@@ -20,7 +20,7 @@ body {
 h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #343a40;
+  color: #E1E8FA;
 }
 
 form {
@@ -32,12 +32,12 @@ form {
 label {
   text-align: left;
   font-weight: bold;
-  color: #495057;
+  color: #E1E8FA;
 }
 
 input {
   margin: 5px 0;
-  padding: 12px;
+  padding: 12px; 
   width: 100%;
   border: 1px solid #ced4da;
   border-radius: 5px;
@@ -57,15 +57,15 @@ button {
   width: 100%;
   border: none;
   border-radius: 5px;
-  background-color: #28a745;
-  color: white;
+  background-color: #385070;
+  color:#E1E8FA;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: #2168C5;
 }
 
 #resultado {
